@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FLASK File Uploads</title>
+  </head>
+  <body>
+    <h1>Upload your file</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+
+    <div>
+      
+      <ul>
+        
+        {% for file in files %}
+            <li>{{ file }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+  </body>
+</html>
